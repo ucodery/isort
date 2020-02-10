@@ -7,4 +7,4 @@ COPY . /isort
 
 RUN python3 -m pip install poetry && poetry install
 
-CMD /isort/scripts/test.sh
+CMD /isort/scripts/done.sh
