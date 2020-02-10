@@ -1,6 +1,7 @@
 FROM python:3
 
-RUN mkdir /isort && cd /isort
+RUN mkdir /isort
+WORKDIR /isort
 COPY . /isort
 
 RUN python3 -m pip install poetry && poetry install
