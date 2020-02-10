@@ -1,4 +1,5 @@
-FROM python:3
+ARG VERSION=3
+FROM python:$VERSION
 
 RUN mkdir /isort
 WORKDIR /isort
@@ -6,4 +7,4 @@ COPY . /isort
 
 RUN python3 -m pip install poetry && poetry install
 
-ENTRYPOINT /isort/scripts/test.sh
+CMD /isort/scripts/test.sh
